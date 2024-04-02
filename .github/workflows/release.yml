@@ -35,8 +35,6 @@ jobs:
       - name: Set up Upterm
         id: upterm
         uses: lhotari/action-upterm@v1
-        with:
-          wait-timeout-minutes: 5
 
       - name: Test downloaded Release
         id: test_release
