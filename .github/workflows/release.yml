@@ -31,10 +31,15 @@ jobs:
           fileName: "AirConnect*.zip"
           out-file-path: "src/dsm7/bin"
           extract: true
+      - name: check bin format
+        run: |
+          cd "${GITHUB_WORKSPACE}"/src/dsm7/bin/
+          ls -al
+          file airupnp-linux-x86_64
 
-      - name: Set up Upterm
-        id: upterm
-        uses: lhotari/action-upterm@v1
+      # - name: Set up Upterm
+      #   id: upterm
+      #   uses: lhotari/action-upterm@v1
 
       - name: Test downloaded Release
         id: test_release
